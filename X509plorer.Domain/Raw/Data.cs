@@ -1,6 +1,6 @@
-﻿using X509plorer.Model.Helpers;
+﻿using X509plorer.Domain.Helpers;
 
-namespace X509plorer.Model.Raw;
+namespace X509plorer.Domain.Raw;
 
 public class Data
 {

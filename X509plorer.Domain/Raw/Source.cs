@@ -1,4 +1,4 @@
-﻿namespace X509plorer.Model.Raw;
+﻿namespace X509plorer.Domain.Raw;
 
 public interface ISource
 {

@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X509plorer.Site", "X509plorer.Site\X509plorer.Site.csproj", "{CD8F0E53-79A9-4AB3-8698-57026654BD69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X509plorer.Model", "X509plorer.Model\X509plorer.Model.csproj", "{C18D4420-B32F-4A47-AE4D-49CDA8AE4A91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X509plorer.Domain", "X509plorer.Domain\X509plorer.Domain.csproj", "{C18D4420-B32F-4A47-AE4D-49CDA8AE4A91}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "X509plorer.Application", "X509plorer.Application\X509plorer.Application.csproj", "{044F88AD-380D-4481-BA2D-DA0666D1312C}"
 EndProject

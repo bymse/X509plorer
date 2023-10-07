@@ -1,4 +1,4 @@
-﻿namespace X509plorer.Model.Helpers;
+﻿namespace X509plorer.Domain.Helpers;
 
 public interface IBytesEncoder
 {

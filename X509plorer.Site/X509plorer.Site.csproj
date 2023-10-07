@@ -66,4 +66,13 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Application\" />
+      <Folder Include="Infrastructure\Encoding\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\X509plorer.Application\X509plorer.Application.csproj" />
+    </ItemGroup>
+
 </Project>
