@@ -20,7 +20,7 @@ public class Data
         private set => derEncoded = value;
     }
 
-    public void FromUploadedFile(string fileName, byte[] bytes)
+    public void FromFile(string fileName, byte[] bytes)
     {
         Source = new UploadedFileSource(fileName);
         DerEncoded = bytesEncoder.ToDerEncoding(bytes);

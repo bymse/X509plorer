@@ -2,5 +2,5 @@
 
 public interface IX509Raw
 {
-    
+    bool IsCertificate { get; }
 }
