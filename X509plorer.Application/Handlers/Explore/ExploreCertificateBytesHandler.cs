@@ -1,32 +1,22 @@
-﻿using X509plorer.Domain.Certificates;
-using X509plorer.Domain.Helpers;
-using X509plorer.Domain.Helpers.X509;
-using X509plorer.Domain.Raw;
+﻿using X509plorer.Application.Services;
+using X509plorer.Domain.Certificates;
 
 namespace X509plorer.Application.Handlers.Explore;
 
 public class ExploreCertificateBytesHandler
 {
-    private readonly IBytesEncoder bytesEncoder;
-    private readonly IX509RawParser x509RawParser;
+    private readonly IX509RawParserService ix509RawParserService;
 
     public ExploreCertificateBytesHandler(
-        IBytesEncoder bytesEncoder,
-        IX509RawParser x509RawParser
+        IX509RawParserService ix509RawParserService
     )
     {
-        this.bytesEncoder = bytesEncoder;
-        this.x509RawParser = x509RawParser;
+        this.ix509RawParserService = ix509RawParserService;
     }
 
-    public Certificate Handle(ExploreCertificateFileModel model)
+    public Certificate Handle(ExploreCertificateBytesModel model)
     {
-        var data = new Data(bytesEncoder);
-        data.FromFile(model.FileName, model.Bytes);
-
-        var certificate = new Certificate(x509RawParser);
-        certificate.FromData(data);
-
-        return certificate;
+        var raw = ix509RawParserService.Parse(model.Bytes);
+        return new Certificate(raw);
     }
 }

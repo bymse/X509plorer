@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\X509plorer.Domain\X509plorer.Domain.csproj" />
+
     </ItemGroup>
 
 
