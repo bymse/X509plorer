@@ -2,5 +2,5 @@
 
 public class CertificateViewModel
 {
-    
+    public Status Status { get; init; }
 }

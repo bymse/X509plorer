@@ -2,5 +2,5 @@
 
 public interface IX509RawParser
 {
-    
+    X509Raw Parse(byte[] data);
 }

@@ -2,12 +2,10 @@
 
 public class X509Raw
 {
-    public bool IsCertificate { get; }
-
-    private X509Raw()
-    {
-        IsCertificate = false;
-    }
+    public bool IsCertificate { get; init; }
     
-    public static X509Raw NotCertificate() => new();
+    public static X509Raw NotCertificate() => new()
+    {
+        IsCertificate = false
+    };
 }
