@@ -1,6 +1,7 @@
 ﻿using Org.BouncyCastle.X509;
+using X509plorer.Site.Models.Certificate.Raw;
 
-namespace X509plorer.Site.Infrastructure.X509Raw.BouncyCastle;
+namespace X509plorer.Site.Infrastructure.Raw;
 
 public class BouncyCastleIx509RawParser : IX509RawParser
 {
@@ -11,16 +12,16 @@ public class BouncyCastleIx509RawParser : IX509RawParser
         certificateAdapter = new BouncyCastleCertificateAdapter();
     }
     
-    public X509Raw Parse(byte[] bytes)
+    public Models.Certificate.Raw.X509Raw Parse(byte[] bytes)
     {
         try
         {
             var certificate = new X509CertificateParser().ReadCertificate(bytes);
-            return certificateAdapter.Adapt(certificate);
+            return certificateAdapter.Adapt(certificate.CertificateStructure);
         }
         catch
         {
-            return X509Raw.NotCertificate();
+            return Models.Certificate.Raw.X509Raw.NotCertificate();
         }
     }
 }

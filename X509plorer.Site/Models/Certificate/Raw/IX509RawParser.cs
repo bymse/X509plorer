@@ -1,4 +1,4 @@
-﻿namespace X509plorer.Site.Infrastructure.X509Raw;
+﻿namespace X509plorer.Site.Models.Certificate.Raw;
 
 public interface IX509RawParser
 {
