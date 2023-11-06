@@ -3,4 +3,6 @@
 public class CertificateViewModel
 {
     public Status Status { get; init; }
+    
+    public IField[] Fields { get; init; }
 }
